@@ -45,8 +45,8 @@ def scrape_area(area):
     :param area:
     :return: A list of results.
     """
-    cl_h = CraigslistJobs(site=settings.CRAIGSLIST_SITE, area=area, category=settings.CRAIGSLIST_HOUSING_SECTION,
-                             filters={'is_internship': settings.IS_INTERNSHIP, 'employment_type': settings.EMPLOYMENT_TYPE})
+    cl_h = CraigslistJobs(site=settings.CRAIGSLIST_SITE, area=area, category=settings.CRAIGSLIST_HOUSING_SECTION)#,
+  ##                           filters={'is_internship': settings.IS_INTERNSHIP, 'employment_type': settings.EMPLOYMENT_TYPE})
 
     results = []
     gen = cl_h.get_results(sort_by='newest', geotagged=True, limit=20)
@@ -64,7 +64,6 @@ def scrape_area(area):
             if result["where"] is None:
                 # If there is no string identifying which neighborhood the result is from, skip it.
                 continue
-###################################################
             lat = 0
             lon = 0
             if result["geotag"] is not None:
@@ -84,7 +83,6 @@ def scrape_area(area):
                 price = float(result["price"].replace("$", ""))
             except Exception:
                 pass
-###################################################
             # Create the listing object.
             listing = Listing(
                 link=result["url"],
