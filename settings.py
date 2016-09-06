@@ -1,6 +1,8 @@
 import os
 
-## Price
+## Type
+IS_INTERNSHIP = False
+EMPLOYMENT_TYPE = ['full-time', 'part-time'] # contract, employee's choice 
 
 # The minimum rent you want to pay per month.
 MIN_PRICE = 1
