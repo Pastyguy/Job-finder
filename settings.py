@@ -98,7 +98,7 @@ TRANSIT_STATIONS = {
 # For instance, https://sfbay.craigslist.org/search/apa find apartments for rent.
 # https://sfbay.craigslist.org/search/sub finds sublets.
 # You only need the last 3 letters of the URLs.
-CRAIGSLIST_HOUSING_SECTION = 'apa'
+CRAIGSLIST_HOUSING_SECTION = 'eng'
 
 ## System settings
 
@@ -112,7 +112,7 @@ SLACK_CHANNEL = "#job"
 
 # The token that allows us to connect to slack.
 # Should be put in private.py, or set as an environment variable.
-SLACK_TOKEN = "xoxp-76525183170-76515208005-76525910626-3cf0eb4c95"
+##SLACK_TOKEN = "xoxp-76525183170-76515208005-76525910626-3cf0eb4c95"
 #os.getenv('SLACK_TOKEN', "xoxp-7652518317076515208005765259106263cf0eb4c95")
 
 # Any private settings are imported here.
