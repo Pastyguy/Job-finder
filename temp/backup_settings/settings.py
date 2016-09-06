@@ -3,10 +3,10 @@ import os
 ## Price
 
 # The minimum rent you want to pay per month.
-MIN_PRICE = 1
+MIN_PRICE = 1500
 
 # The maximum rent you want to pay per month.
-MAX_PRICE = 90000
+MAX_PRICE = 2000
 
 ## Location preferences
 
@@ -108,12 +108,11 @@ CRAIGSLIST_HOUSING_SECTION = 'apa'
 SLEEP_INTERVAL = 20 * 60 # 20 minutes
 
 # Which slack channel to post the listings into.
-SLACK_CHANNEL = "#job"
+SLACK_CHANNEL = "#housing"
 
 # The token that allows us to connect to slack.
 # Should be put in private.py, or set as an environment variable.
-SLACK_TOKEN = "xoxp-76525183170-76515208005-76525910626-3cf0eb4c95"
-#os.getenv('SLACK_TOKEN', "xoxp-7652518317076515208005765259106263cf0eb4c95")
+SLACK_TOKEN = os.getenv('SLACK_TOKEN', "")
 
 # Any private settings are imported here.
 try:
